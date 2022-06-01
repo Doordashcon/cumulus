@@ -1,6 +1,9 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `polkadot-parachains&#x2F;rococo-parachain&#x2F;src&#x2F;lib.rs`."><meta name="keywords" content="rust, rustlang, rust-lang"><title>lib.rs - source</title><link rel="preload" as="font" type="font/woff2" crossorigin href="../../SourceSerif4-Regular.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../FiraSans-Regular.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../FiraSans-Medium.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../SourceCodePro-Regular.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../SourceSerif4-Bold.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../SourceCodePro-Semibold.ttf.woff2"><link rel="stylesheet" type="text/css" href="../../normalize.css"><link rel="stylesheet" type="text/css" href="../../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../../ayu.css" disabled><link rel="stylesheet" type="text/css" href="../../dark.css" disabled><link rel="stylesheet" type="text/css" href="../../light.css" id="themeStyle"><script id="default-settings" ></script><script src="../../storage.js"></script><script src="../../crates.js"></script><script defer src="../../main.js"></script><script defer src="../../source-script.js"></script><script defer src="../../source-files.js"></script>
-    <noscript><link rel="stylesheet" href="../../noscript.css"></noscript><link rel="alternate icon" type="image/png" href="../../favicon-16x16.png"><link rel="alternate icon" type="image/png" href="../../favicon-32x32.png"><link rel="icon" type="image/svg+xml" href="../../favicon.svg"></head><body class="rustdoc source"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"><div class="sidebar-menu" role="button">&#9776;</div><a class="sidebar-logo" href="../../rococo_parachain_runtime/index.html"><div class="logo-container"><img class="rust-logo" src="../../rust-logo.png" alt="logo"></div>
-        </a></nav><main><div class="width-limiter"><div class="sub-container"><a class="sub-logo-container" href="../../rococo_parachain_runtime/index.html"><img class="rust-logo" src="../../rust-logo.png" alt="logo"></a><nav class="sub"><div class="theme-picker"><button id="theme-picker" aria-label="Pick another theme!" aria-haspopup="menu" title="themes"><img width="18" height="18" alt="Pick another theme!" src="../../brush.svg"></button><div id="theme-choices" role="menu"></div></div><form class="search-form"><div class="search-container"><div><select id="crate-search"><option value="All crates">All crates</option></select><input class="search-input" name="search" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"></div><button type="button" id="help-button" title="help">?</button><a id="settings-menu" href="../../settings.html" title="settings"><img width="18" height="18" alt="Change settings" src="../../wheel.svg"></a></div></form></nav></div><section id="main-content" class="content"><div class="example-wrap"><pre class="line-numbers"><span id="1">  1</span>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `parachains/runtimes/testing/rococo-parachain/src/lib.rs`."><meta name="keywords" content="rust, rustlang, rust-lang"><title>lib.rs - source</title><link rel="preload" as="font" type="font/woff2" crossorigin href="../../SourceSerif4-Regular.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../FiraSans-Regular.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../FiraSans-Medium.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../SourceCodePro-Regular.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../SourceSerif4-Bold.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../SourceCodePro-Semibold.ttf.woff2"><link rel="stylesheet" type="text/css" href="../../normalize.css"><link rel="stylesheet" type="text/css" href="../../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../../ayu.css" disabled><link rel="stylesheet" type="text/css" href="../../dark.css" disabled><link rel="stylesheet" type="text/css" href="../../light.css" id="themeStyle"><script id="default-settings" ></script><script src="../../storage.js"></script><script src="../../crates.js"></script><script defer src="../../main.js"></script><script defer src="../../source-script.js"></script><script defer src="../../source-files.js"></script>
+    <noscript><link rel="stylesheet" href="../../noscript.css"></noscript><link rel="alternate icon" type="image/png" href="../../favicon-16x16.png"><link rel="alternate icon" type="image/png" href="../../favicon-32x32.png"><link rel="icon" type="image/svg+xml" href="../../favicon.svg"></head><body class="rustdoc source"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="mobile-topbar"><button class="sidebar-menu-toggle">&#9776;</button><a class="sidebar-logo" href="../../rococo_parachain_runtime/index.html"><div class="logo-container"><img class="rust-logo" src="../../rust-logo.svg" alt="logo"></div>
+        </a><h2 class="location"></h2>
+    </nav>
+    <nav class="sidebar"><a class="sidebar-logo" href="../../rococo_parachain_runtime/index.html"><div class="logo-container"><img class="rust-logo" src="../../rust-logo.svg" alt="logo"></div>
+        </a></nav><main><div class="width-limiter"><div class="sub-container"><a class="sub-logo-container" href="../../rococo_parachain_runtime/index.html"><img class="rust-logo" src="../../rust-logo.svg" alt="logo"></a><nav class="sub"><div class="theme-picker hidden"><button id="theme-picker" aria-label="Pick another theme!" aria-haspopup="menu" title="themes"><img width="22" height="22" alt="Pick another theme!" src="../../brush.svg"></button><div id="theme-choices" role="menu"></div></div><form class="search-form"><div class="search-container"><span></span><input class="search-input" name="search" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><button type="button" id="help-button" title="help">?</button><a id="settings-menu" href="../../settings.html" title="settings"><img width="22" height="22" alt="Change settings" src="../../wheel.svg"></a></div></form></nav></div><section id="main-content" class="content"><div class="example-wrap"><pre class="line-numbers"><span id="1">  1</span>
 <span id="2">  2</span>
 <span id="3">  3</span>
 <span id="4">  4</span>
@@ -734,7 +737,8 @@
 <span id="732">732</span>
 <span id="733">733</span>
 <span id="734">734</span>
-</pre><pre class="rust"><code><span class="comment">// Copyright 2019-2021 Parity Technologies (UK) Ltd.</span>
+<span id="735">735</span>
+</pre><pre class="rust"><code><span class="comment">// Copyright 2019-2022 Parity Technologies (UK) Ltd.</span>
 <span class="comment">// This file is part of Cumulus.</span>
 
 <span class="comment">// Cumulus is free software: you can redistribute it and/or modify</span>
@@ -774,10 +778,10 @@
 <span class="comment">// A few exports that help ease life for downstream crates.</span>
 <span class="kw">pub</span> <span class="kw">use</span> <span class="ident">frame_support</span>::{
 	<span class="ident">construct_runtime</span>, <span class="ident">match_types</span>, <span class="ident">parameter_types</span>,
-	<span class="ident">traits</span>::{<span class="ident">EnsureOneOf</span>, <span class="ident">Everything</span>, <span class="ident">IsInVec</span>, <span class="ident">Randomness</span>},
+	<span class="ident">traits</span>::{<span class="ident">EitherOfDiverse</span>, <span class="ident">Everything</span>, <span class="ident">IsInVec</span>, <span class="ident">Randomness</span>},
 	<span class="ident">weights</span>::{
 		<span class="ident">constants</span>::{<span class="ident">BlockExecutionWeight</span>, <span class="ident">ExtrinsicBaseWeight</span>, <span class="ident">RocksDbWeight</span>, <span class="ident">WEIGHT_PER_SECOND</span>},
-		<span class="ident">DispatchClass</span>, <span class="ident">IdentityFee</span>, <span class="ident">Weight</span>,
+		<span class="ident">ConstantMultiplier</span>, <span class="ident">DispatchClass</span>, <span class="ident">IdentityFee</span>, <span class="ident">Weight</span>,
 	},
 	<span class="ident">StorageValue</span>,
 };
@@ -829,7 +833,7 @@
 	<span class="ident">spec_name</span>: <span class="macro">create_runtime_str!</span>(<span class="string">&quot;test-parachain&quot;</span>),
 	<span class="ident">impl_name</span>: <span class="macro">create_runtime_str!</span>(<span class="string">&quot;test-parachain&quot;</span>),
 	<span class="ident">authoring_version</span>: <span class="number">1</span>,
-	<span class="ident">spec_version</span>: <span class="number">900</span>,
+	<span class="ident">spec_version</span>: <span class="number">9220</span>,
 	<span class="ident">impl_version</span>: <span class="number">0</span>,
 	<span class="ident">apis</span>: <span class="ident">RUNTIME_API_VERSIONS</span>,
 	<span class="ident">transaction_version</span>: <span class="number">1</span>,
@@ -976,8 +980,8 @@
 
 <span class="kw">impl</span> <span class="ident">pallet_transaction_payment::Config</span> <span class="kw">for</span> <span class="ident">Runtime</span> {
 	<span class="kw">type</span> <span class="ident">OnChargeTransaction</span> <span class="op">=</span> <span class="ident">pallet_transaction_payment::CurrencyAdapter</span><span class="op">&lt;</span><span class="ident">Balances</span>, ()<span class="op">&gt;</span>;
-	<span class="kw">type</span> <span class="ident">TransactionByteFee</span> <span class="op">=</span> <span class="ident">TransactionByteFee</span>;
 	<span class="kw">type</span> <span class="ident">WeightToFee</span> <span class="op">=</span> <span class="ident">IdentityFee</span><span class="op">&lt;</span><span class="ident">Balance</span><span class="op">&gt;</span>;
+	<span class="kw">type</span> <span class="ident">LengthToFee</span> <span class="op">=</span> <span class="ident">ConstantMultiplier</span><span class="op">&lt;</span><span class="ident">Balance</span>, <span class="ident">TransactionByteFee</span><span class="op">&gt;</span>;
 	<span class="kw">type</span> <span class="ident">FeeMultiplierUpdate</span> <span class="op">=</span> ();
 	<span class="kw">type</span> <span class="ident">OperationalFeeMultiplier</span> <span class="op">=</span> <span class="ident">OperationalFeeMultiplier</span>;
 }
@@ -1219,7 +1223,7 @@
 
 <span class="doccomment">/// A majority of the Unit body from Rococo over XCM is our required administration origin.</span>
 <span class="kw">pub</span> <span class="kw">type</span> <span class="ident">AdminOrigin</span> <span class="op">=</span>
-	<span class="ident">EnsureOneOf</span><span class="op">&lt;</span><span class="ident">EnsureRoot</span><span class="op">&lt;</span><span class="ident">AccountId</span><span class="op">&gt;</span>, <span class="ident">EnsureXcm</span><span class="op">&lt;</span><span class="ident">IsMajorityOfBody</span><span class="op">&lt;</span><span class="ident">RocLocation</span>, <span class="ident">UnitBody</span><span class="op">&gt;</span><span class="op">&gt;</span><span class="op">&gt;</span>;
+	<span class="ident">EitherOfDiverse</span><span class="op">&lt;</span><span class="ident">EnsureRoot</span><span class="op">&lt;</span><span class="ident">AccountId</span><span class="op">&gt;</span>, <span class="ident">EnsureXcm</span><span class="op">&lt;</span><span class="ident">IsMajorityOfBody</span><span class="op">&lt;</span><span class="ident">RocLocation</span>, <span class="ident">UnitBody</span><span class="op">&gt;</span><span class="op">&gt;</span><span class="op">&gt;</span>;
 
 <span class="kw">impl</span> <span class="ident">pallet_assets::Config</span> <span class="kw">for</span> <span class="ident">Runtime</span> {
 	<span class="kw">type</span> <span class="ident">Event</span> <span class="op">=</span> <span class="ident">Event</span>;
@@ -1328,6 +1332,7 @@
 	<span class="kw">fn</span> <span class="ident">on_runtime_upgrade</span>() -&gt; <span class="ident">Weight</span> {
 		<span class="kw">use</span> <span class="ident">frame_support::storage::migration</span>;
 		<span class="comment">// Remove the storage value `RandomMaterial` from removed pallet `RandomnessCollectiveFlip`</span>
+		<span class="attribute">#[<span class="ident">allow</span>(<span class="ident">deprecated</span>)]</span>
 		<span class="ident">migration::remove_storage_prefix</span>(<span class="string">b&quot;RandomnessCollectiveFlip&quot;</span>, <span class="string">b&quot;RandomMaterial&quot;</span>, <span class="string">b&quot;&quot;</span>);
 		<span class="op">&lt;</span><span class="ident">Runtime</span> <span class="kw">as</span> <span class="ident">frame_system::Config</span><span class="op">&gt;</span><span class="ident">::DbWeight::get</span>().<span class="ident">writes</span>(<span class="number">1</span>)
 	}
@@ -1469,5 +1474,5 @@
 	<span class="ident">CheckInherents</span> <span class="op">=</span> <span class="ident">CheckInherents</span>,
 }
 </code></pre></div>
-</section><section id="search" class="content hidden"></section></div></main><div id="rustdoc-vars" data-root-path="../../" data-current-crate="rococo_parachain_runtime" data-themes="ayu,dark,light" data-resource-suffix="" data-rustdoc-version="1.59.0 (9d1b2106e 2022-02-23)" ></div>
+</section><section id="search" class="content hidden"></section></div></main><div id="rustdoc-vars" data-root-path="../../" data-current-crate="rococo_parachain_runtime" data-themes="ayu,dark,light" data-resource-suffix="" data-rustdoc-version="1.60.0 (7737e0b5c 2022-04-04)" ></div>
 </body></html>

@@ -1,6 +1,9 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `polkadot-parachains&#x2F;statemint&#x2F;src&#x2F;lib.rs`."><meta name="keywords" content="rust, rustlang, rust-lang"><title>lib.rs - source</title><link rel="preload" as="font" type="font/woff2" crossorigin href="../../SourceSerif4-Regular.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../FiraSans-Regular.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../FiraSans-Medium.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../SourceCodePro-Regular.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../SourceSerif4-Bold.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../SourceCodePro-Semibold.ttf.woff2"><link rel="stylesheet" type="text/css" href="../../normalize.css"><link rel="stylesheet" type="text/css" href="../../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../../ayu.css" disabled><link rel="stylesheet" type="text/css" href="../../dark.css" disabled><link rel="stylesheet" type="text/css" href="../../light.css" id="themeStyle"><script id="default-settings" ></script><script src="../../storage.js"></script><script src="../../crates.js"></script><script defer src="../../main.js"></script><script defer src="../../source-script.js"></script><script defer src="../../source-files.js"></script>
-    <noscript><link rel="stylesheet" href="../../noscript.css"></noscript><link rel="alternate icon" type="image/png" href="../../favicon-16x16.png"><link rel="alternate icon" type="image/png" href="../../favicon-32x32.png"><link rel="icon" type="image/svg+xml" href="../../favicon.svg"></head><body class="rustdoc source"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"><div class="sidebar-menu" role="button">&#9776;</div><a class="sidebar-logo" href="../../statemint_runtime/index.html"><div class="logo-container"><img class="rust-logo" src="../../rust-logo.png" alt="logo"></div>
-        </a></nav><main><div class="width-limiter"><div class="sub-container"><a class="sub-logo-container" href="../../statemint_runtime/index.html"><img class="rust-logo" src="../../rust-logo.png" alt="logo"></a><nav class="sub"><div class="theme-picker"><button id="theme-picker" aria-label="Pick another theme!" aria-haspopup="menu" title="themes"><img width="18" height="18" alt="Pick another theme!" src="../../brush.svg"></button><div id="theme-choices" role="menu"></div></div><form class="search-form"><div class="search-container"><div><select id="crate-search"><option value="All crates">All crates</option></select><input class="search-input" name="search" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"></div><button type="button" id="help-button" title="help">?</button><a id="settings-menu" href="../../settings.html" title="settings"><img width="18" height="18" alt="Change settings" src="../../wheel.svg"></a></div></form></nav></div><section id="main-content" class="content"><div class="example-wrap"><pre class="line-numbers"><span id="1">  1</span>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `parachains/runtimes/assets/statemint/src/lib.rs`."><meta name="keywords" content="rust, rustlang, rust-lang"><title>lib.rs - source</title><link rel="preload" as="font" type="font/woff2" crossorigin href="../../SourceSerif4-Regular.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../FiraSans-Regular.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../FiraSans-Medium.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../SourceCodePro-Regular.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../SourceSerif4-Bold.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../SourceCodePro-Semibold.ttf.woff2"><link rel="stylesheet" type="text/css" href="../../normalize.css"><link rel="stylesheet" type="text/css" href="../../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../../ayu.css" disabled><link rel="stylesheet" type="text/css" href="../../dark.css" disabled><link rel="stylesheet" type="text/css" href="../../light.css" id="themeStyle"><script id="default-settings" ></script><script src="../../storage.js"></script><script src="../../crates.js"></script><script defer src="../../main.js"></script><script defer src="../../source-script.js"></script><script defer src="../../source-files.js"></script>
+    <noscript><link rel="stylesheet" href="../../noscript.css"></noscript><link rel="alternate icon" type="image/png" href="../../favicon-16x16.png"><link rel="alternate icon" type="image/png" href="../../favicon-32x32.png"><link rel="icon" type="image/svg+xml" href="../../favicon.svg"></head><body class="rustdoc source"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="mobile-topbar"><button class="sidebar-menu-toggle">&#9776;</button><a class="sidebar-logo" href="../../statemint_runtime/index.html"><div class="logo-container"><img class="rust-logo" src="../../rust-logo.svg" alt="logo"></div>
+        </a><h2 class="location"></h2>
+    </nav>
+    <nav class="sidebar"><a class="sidebar-logo" href="../../statemint_runtime/index.html"><div class="logo-container"><img class="rust-logo" src="../../rust-logo.svg" alt="logo"></div>
+        </a></nav><main><div class="width-limiter"><div class="sub-container"><a class="sub-logo-container" href="../../statemint_runtime/index.html"><img class="rust-logo" src="../../rust-logo.svg" alt="logo"></a><nav class="sub"><div class="theme-picker hidden"><button id="theme-picker" aria-label="Pick another theme!" aria-haspopup="menu" title="themes"><img width="22" height="22" alt="Pick another theme!" src="../../brush.svg"></button><div id="theme-choices" role="menu"></div></div><form class="search-form"><div class="search-container"><span></span><input class="search-input" name="search" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><button type="button" id="help-button" title="help">?</button><a id="settings-menu" href="../../settings.html" title="settings"><img width="22" height="22" alt="Change settings" src="../../wheel.svg"></a></div></form></nav></div><section id="main-content" class="content"><div class="example-wrap"><pre class="line-numbers"><span id="1">  1</span>
 <span id="2">  2</span>
 <span id="3">  3</span>
 <span id="4">  4</span>
@@ -831,7 +834,42 @@
 <span id="829">829</span>
 <span id="830">830</span>
 <span id="831">831</span>
-</pre><pre class="rust"><code><span class="comment">// Copyright (C) 2021 Parity Technologies (UK) Ltd.</span>
+<span id="832">832</span>
+<span id="833">833</span>
+<span id="834">834</span>
+<span id="835">835</span>
+<span id="836">836</span>
+<span id="837">837</span>
+<span id="838">838</span>
+<span id="839">839</span>
+<span id="840">840</span>
+<span id="841">841</span>
+<span id="842">842</span>
+<span id="843">843</span>
+<span id="844">844</span>
+<span id="845">845</span>
+<span id="846">846</span>
+<span id="847">847</span>
+<span id="848">848</span>
+<span id="849">849</span>
+<span id="850">850</span>
+<span id="851">851</span>
+<span id="852">852</span>
+<span id="853">853</span>
+<span id="854">854</span>
+<span id="855">855</span>
+<span id="856">856</span>
+<span id="857">857</span>
+<span id="858">858</span>
+<span id="859">859</span>
+<span id="860">860</span>
+<span id="861">861</span>
+<span id="862">862</span>
+<span id="863">863</span>
+<span id="864">864</span>
+<span id="865">865</span>
+<span id="866">866</span>
+</pre><pre class="rust"><code><span class="comment">// Copyright (C) 2021-2022 Parity Technologies (UK) Ltd.</span>
 <span class="comment">// SPDX-License-Identifier: Apache-2.0</span>
 
 <span class="comment">// Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span>
@@ -846,7 +884,38 @@
 <span class="comment">// See the License for the specific language governing permissions and</span>
 <span class="comment">// limitations under the License.</span>
 
-<span class="doccomment">//! Statemint runtime.</span>
+<span class="doccomment">//! # Statemint Runtime</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! Statemint is a parachain that provides an interface to create, manage, and use assets. Assets</span>
+<span class="doccomment">//! may be fungible or non-fungible.</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! ## Assets</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! - Fungibles: Configuration of `pallet-assets`.</span>
+<span class="doccomment">//! - Non-Fungibles (NFTs): Configuration of `pallet-uniques`.</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! ## Other Functionality</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! ### Native Balances</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! Statemint uses its parent DOT token as its native asset.</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! ### Governance</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! As a common good parachain, Statemint defers its governance (namely, its `Root` origin), to its</span>
+<span class="doccomment">//! Relay Chain parent, Polkadot.</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! ### Collator Selection</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! Statemint uses `pallet-collator-selection`, a simple first-come-first-served registration</span>
+<span class="doccomment">//! system where collators can reserve a small bond to join the block producer set. There is no</span>
+<span class="doccomment">//! slashing.</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! ### XCM</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! Because Statemint is fully under the control of the Relay Chain, it is meant to be a</span>
+<span class="doccomment">//! `TrustedTeleporter`. It can also serve as a reserve location to other parachains for DOT as well</span>
+<span class="doccomment">//! as other local assets.</span>
 
 <span class="attribute">#![<span class="ident">cfg_attr</span>(<span class="ident">not</span>(<span class="ident">feature</span> <span class="op">=</span> <span class="string">&quot;std&quot;</span>), <span class="ident">no_std</span>)]</span>
 <span class="attribute">#![<span class="ident">recursion_limit</span> <span class="op">=</span> <span class="string">&quot;256&quot;</span>]</span>
@@ -877,8 +946,8 @@
 <span class="kw">use</span> <span class="ident">constants</span>::{<span class="ident">currency</span>::<span class="kw-2">*</span>, <span class="ident">fee::WeightToFee</span>};
 <span class="kw">use</span> <span class="ident">frame_support</span>::{
 	<span class="ident">construct_runtime</span>, <span class="ident">parameter_types</span>,
-	<span class="ident">traits</span>::{<span class="ident">AsEnsureOriginWithArg</span>, <span class="ident">EnsureOneOf</span>, <span class="ident">InstanceFilter</span>},
-	<span class="ident">weights</span>::{<span class="ident">DispatchClass</span>, <span class="ident">Weight</span>},
+	<span class="ident">traits</span>::{<span class="ident">AsEnsureOriginWithArg</span>, <span class="ident">EitherOfDiverse</span>, <span class="ident">InstanceFilter</span>},
+	<span class="ident">weights</span>::{<span class="ident">ConstantMultiplier</span>, <span class="ident">DispatchClass</span>, <span class="ident">Weight</span>},
 	<span class="ident">PalletId</span>, <span class="ident">RuntimeDebug</span>,
 };
 <span class="kw">use</span> <span class="ident">frame_system</span>::{
@@ -916,10 +985,10 @@
 	<span class="ident">spec_name</span>: <span class="macro">create_runtime_str!</span>(<span class="string">&quot;statemint&quot;</span>),
 	<span class="ident">impl_name</span>: <span class="macro">create_runtime_str!</span>(<span class="string">&quot;statemint&quot;</span>),
 	<span class="ident">authoring_version</span>: <span class="number">1</span>,
-	<span class="ident">spec_version</span>: <span class="number">900</span>,
+	<span class="ident">spec_version</span>: <span class="number">9220</span>,
 	<span class="ident">impl_version</span>: <span class="number">0</span>,
 	<span class="ident">apis</span>: <span class="ident">RUNTIME_API_VERSIONS</span>,
-	<span class="ident">transaction_version</span>: <span class="number">5</span>,
+	<span class="ident">transaction_version</span>: <span class="number">6</span>,
 	<span class="ident">state_version</span>: <span class="number">0</span>,
 };
 
@@ -1034,8 +1103,8 @@
 <span class="kw">impl</span> <span class="ident">pallet_transaction_payment::Config</span> <span class="kw">for</span> <span class="ident">Runtime</span> {
 	<span class="kw">type</span> <span class="ident">OnChargeTransaction</span> <span class="op">=</span>
 		<span class="ident">pallet_transaction_payment::CurrencyAdapter</span><span class="op">&lt;</span><span class="ident">Balances</span>, <span class="ident">DealWithFees</span><span class="op">&lt;</span><span class="ident">Runtime</span><span class="op">&gt;</span><span class="op">&gt;</span>;
-	<span class="kw">type</span> <span class="ident">TransactionByteFee</span> <span class="op">=</span> <span class="ident">TransactionByteFee</span>;
 	<span class="kw">type</span> <span class="ident">WeightToFee</span> <span class="op">=</span> <span class="ident">WeightToFee</span>;
+	<span class="kw">type</span> <span class="ident">LengthToFee</span> <span class="op">=</span> <span class="ident">ConstantMultiplier</span><span class="op">&lt;</span><span class="ident">Balance</span>, <span class="ident">TransactionByteFee</span><span class="op">&gt;</span>;
 	<span class="kw">type</span> <span class="ident">FeeMultiplierUpdate</span> <span class="op">=</span> <span class="ident">SlowAdjustingFeeUpdate</span><span class="op">&lt;</span><span class="self">Self</span><span class="op">&gt;</span>;
 	<span class="kw">type</span> <span class="ident">OperationalFeeMultiplier</span> <span class="op">=</span> <span class="ident">OperationalFeeMultiplier</span>;
 }
@@ -1054,7 +1123,7 @@
 
 <span class="doccomment">/// We allow root and the Relay Chain council to execute privileged asset operations.</span>
 <span class="kw">pub</span> <span class="kw">type</span> <span class="ident">AssetsForceOrigin</span> <span class="op">=</span>
-	<span class="ident">EnsureOneOf</span><span class="op">&lt;</span><span class="ident">EnsureRoot</span><span class="op">&lt;</span><span class="ident">AccountId</span><span class="op">&gt;</span>, <span class="ident">EnsureXcm</span><span class="op">&lt;</span><span class="ident">IsMajorityOfBody</span><span class="op">&lt;</span><span class="ident">DotLocation</span>, <span class="ident">ExecutiveBody</span><span class="op">&gt;</span><span class="op">&gt;</span><span class="op">&gt;</span>;
+	<span class="ident">EitherOfDiverse</span><span class="op">&lt;</span><span class="ident">EnsureRoot</span><span class="op">&lt;</span><span class="ident">AccountId</span><span class="op">&gt;</span>, <span class="ident">EnsureXcm</span><span class="op">&lt;</span><span class="ident">IsMajorityOfBody</span><span class="op">&lt;</span><span class="ident">DotLocation</span>, <span class="ident">ExecutiveBody</span><span class="op">&gt;</span><span class="op">&gt;</span><span class="op">&gt;</span>;
 
 <span class="kw">impl</span> <span class="ident">pallet_assets::Config</span> <span class="kw">for</span> <span class="ident">Runtime</span> {
 	<span class="kw">type</span> <span class="ident">Event</span> <span class="op">=</span> <span class="ident">Event</span>;
@@ -1178,10 +1247,11 @@
 					<span class="ident">Call::Uniques</span>(<span class="ident">pallet_uniques::Call::set_team</span> { .. }) <span class="op">|</span>
 					<span class="ident">Call::Uniques</span>(<span class="ident">pallet_uniques::Call::set_metadata</span> { .. }) <span class="op">|</span>
 					<span class="ident">Call::Uniques</span>(<span class="ident">pallet_uniques::Call::set_attribute</span> { .. }) <span class="op">|</span>
-					<span class="ident">Call::Uniques</span>(<span class="ident">pallet_uniques::Call::set_class_metadata</span> { .. }) <span class="op">|</span>
+					<span class="ident">Call::Uniques</span>(<span class="ident">pallet_uniques::Call::set_collection_metadata</span> { .. }) <span class="op">|</span>
 					<span class="ident">Call::Uniques</span>(<span class="ident">pallet_uniques::Call::clear_metadata</span> { .. }) <span class="op">|</span>
 					<span class="ident">Call::Uniques</span>(<span class="ident">pallet_uniques::Call::clear_attribute</span> { .. }) <span class="op">|</span>
-					<span class="ident">Call::Uniques</span>(<span class="ident">pallet_uniques::Call::clear_class_metadata</span> { .. }) <span class="op">|</span>
+					<span class="ident">Call::Uniques</span>(<span class="ident">pallet_uniques::Call::clear_collection_metadata</span> { .. }) <span class="op">|</span>
+					<span class="ident">Call::Uniques</span>(<span class="ident">pallet_uniques::Call::set_collection_max_supply</span> { .. }) <span class="op">|</span>
 					<span class="ident">Call::Utility</span> { .. } <span class="op">|</span> <span class="ident">Call::Multisig</span> { .. }
 			),
 			<span class="ident">ProxyType::AssetManager</span> =&gt; <span class="macro">matches!</span>(
@@ -1196,8 +1266,8 @@
 					<span class="ident">Call::Uniques</span>(<span class="ident">pallet_uniques::Call::burn</span> { .. }) <span class="op">|</span>
 					<span class="ident">Call::Uniques</span>(<span class="ident">pallet_uniques::Call::freeze</span> { .. }) <span class="op">|</span>
 					<span class="ident">Call::Uniques</span>(<span class="ident">pallet_uniques::Call::thaw</span> { .. }) <span class="op">|</span>
-					<span class="ident">Call::Uniques</span>(<span class="ident">pallet_uniques::Call::freeze_class</span> { .. }) <span class="op">|</span>
-					<span class="ident">Call::Uniques</span>(<span class="ident">pallet_uniques::Call::thaw_class</span> { .. }) <span class="op">|</span>
+					<span class="ident">Call::Uniques</span>(<span class="ident">pallet_uniques::Call::freeze_collection</span> { .. }) <span class="op">|</span>
+					<span class="ident">Call::Uniques</span>(<span class="ident">pallet_uniques::Call::thaw_collection</span> { .. }) <span class="op">|</span>
 					<span class="ident">Call::Utility</span> { .. } <span class="op">|</span> <span class="ident">Call::Multisig</span> { .. }
 			),
 			<span class="ident">ProxyType::Collator</span> =&gt; <span class="macro">matches!</span>(
@@ -1259,8 +1329,10 @@
 	<span class="kw">type</span> <span class="ident">ChannelInfo</span> <span class="op">=</span> <span class="ident">ParachainSystem</span>;
 	<span class="kw">type</span> <span class="ident">VersionWrapper</span> <span class="op">=</span> <span class="ident">PolkadotXcm</span>;
 	<span class="kw">type</span> <span class="ident">ExecuteOverweightOrigin</span> <span class="op">=</span> <span class="ident">EnsureRoot</span><span class="op">&lt;</span><span class="ident">AccountId</span><span class="op">&gt;</span>;
-	<span class="kw">type</span> <span class="ident">ControllerOrigin</span> <span class="op">=</span>
-		<span class="ident">EnsureOneOf</span><span class="op">&lt;</span><span class="ident">EnsureRoot</span><span class="op">&lt;</span><span class="ident">AccountId</span><span class="op">&gt;</span>, <span class="ident">EnsureXcm</span><span class="op">&lt;</span><span class="ident">IsMajorityOfBody</span><span class="op">&lt;</span><span class="ident">DotLocation</span>, <span class="ident">ExecutiveBody</span><span class="op">&gt;</span><span class="op">&gt;</span><span class="op">&gt;</span>;
+	<span class="kw">type</span> <span class="ident">ControllerOrigin</span> <span class="op">=</span> <span class="ident">EitherOfDiverse</span><span class="op">&lt;</span>
+		<span class="ident">EnsureRoot</span><span class="op">&lt;</span><span class="ident">AccountId</span><span class="op">&gt;</span>,
+		<span class="ident">EnsureXcm</span><span class="op">&lt;</span><span class="ident">IsMajorityOfBody</span><span class="op">&lt;</span><span class="ident">DotLocation</span>, <span class="ident">ExecutiveBody</span><span class="op">&gt;</span><span class="op">&gt;</span>,
+	<span class="op">&gt;</span>;
 	<span class="kw">type</span> <span class="ident">ControllerOriginConverter</span> <span class="op">=</span> <span class="ident">XcmOriginToTransactDispatchOrigin</span>;
 	<span class="kw">type</span> <span class="ident">WeightInfo</span> <span class="op">=</span> <span class="ident">weights::cumulus_pallet_xcmp_queue::WeightInfo</span><span class="op">&lt;</span><span class="ident">Runtime</span><span class="op">&gt;</span>;
 }
@@ -1307,7 +1379,7 @@
 
 <span class="doccomment">/// We allow root and the Relay Chain council to execute privileged collator selection operations.</span>
 <span class="kw">pub</span> <span class="kw">type</span> <span class="ident">CollatorSelectionUpdateOrigin</span> <span class="op">=</span>
-	<span class="ident">EnsureOneOf</span><span class="op">&lt;</span><span class="ident">EnsureRoot</span><span class="op">&lt;</span><span class="ident">AccountId</span><span class="op">&gt;</span>, <span class="ident">EnsureXcm</span><span class="op">&lt;</span><span class="ident">IsMajorityOfBody</span><span class="op">&lt;</span><span class="ident">DotLocation</span>, <span class="ident">ExecutiveBody</span><span class="op">&gt;</span><span class="op">&gt;</span><span class="op">&gt;</span>;
+	<span class="ident">EitherOfDiverse</span><span class="op">&lt;</span><span class="ident">EnsureRoot</span><span class="op">&lt;</span><span class="ident">AccountId</span><span class="op">&gt;</span>, <span class="ident">EnsureXcm</span><span class="op">&lt;</span><span class="ident">IsMajorityOfBody</span><span class="op">&lt;</span><span class="ident">DotLocation</span>, <span class="ident">ExecutiveBody</span><span class="op">&gt;</span><span class="op">&gt;</span><span class="op">&gt;</span>;
 
 <span class="kw">impl</span> <span class="ident">pallet_collator_selection::Config</span> <span class="kw">for</span> <span class="ident">Runtime</span> {
 	<span class="kw">type</span> <span class="ident">Event</span> <span class="op">=</span> <span class="ident">Event</span>;
@@ -1334,8 +1406,8 @@
 }
 
 <span class="macro">parameter_types!</span> {
-	<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">ClassDeposit</span>: <span class="ident">Balance</span> <span class="op">=</span> <span class="ident">UNITS</span>; <span class="comment">// 1 UNIT deposit to create asset class</span>
-	<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">InstanceDeposit</span>: <span class="ident">Balance</span> <span class="op">=</span> <span class="ident">UNITS</span> <span class="op">/</span> <span class="number">100</span>; <span class="comment">// 1/100 UNIT deposit to create asset instance</span>
+	<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">CollectionDeposit</span>: <span class="ident">Balance</span> <span class="op">=</span> <span class="ident">UNITS</span>; <span class="comment">// 1 UNIT deposit to create asset class</span>
+	<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">ItemDeposit</span>: <span class="ident">Balance</span> <span class="op">=</span> <span class="ident">UNITS</span> <span class="op">/</span> <span class="number">100</span>; <span class="comment">// 1/100 UNIT deposit to create asset instance</span>
 	<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">KeyLimit</span>: <span class="ident">u32</span> <span class="op">=</span> <span class="number">32</span>;	<span class="comment">// Max 32 bytes per key</span>
 	<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">ValueLimit</span>: <span class="ident">u32</span> <span class="op">=</span> <span class="number">64</span>;	<span class="comment">// Max 64 bytes per value</span>
 	<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">UniquesMetadataDepositBase</span>: <span class="ident">Balance</span> <span class="op">=</span> <span class="ident">deposit</span>(<span class="number">1</span>, <span class="number">129</span>);
@@ -1346,12 +1418,12 @@
 
 <span class="kw">impl</span> <span class="ident">pallet_uniques::Config</span> <span class="kw">for</span> <span class="ident">Runtime</span> {
 	<span class="kw">type</span> <span class="ident">Event</span> <span class="op">=</span> <span class="ident">Event</span>;
-	<span class="kw">type</span> <span class="ident">ClassId</span> <span class="op">=</span> <span class="ident">u32</span>;
-	<span class="kw">type</span> <span class="ident">InstanceId</span> <span class="op">=</span> <span class="ident">u32</span>;
+	<span class="kw">type</span> <span class="ident">CollectionId</span> <span class="op">=</span> <span class="ident">u32</span>;
+	<span class="kw">type</span> <span class="ident">ItemId</span> <span class="op">=</span> <span class="ident">u32</span>;
 	<span class="kw">type</span> <span class="ident">Currency</span> <span class="op">=</span> <span class="ident">Balances</span>;
 	<span class="kw">type</span> <span class="ident">ForceOrigin</span> <span class="op">=</span> <span class="ident">AssetsForceOrigin</span>;
-	<span class="kw">type</span> <span class="ident">ClassDeposit</span> <span class="op">=</span> <span class="ident">ClassDeposit</span>;
-	<span class="kw">type</span> <span class="ident">InstanceDeposit</span> <span class="op">=</span> <span class="ident">InstanceDeposit</span>;
+	<span class="kw">type</span> <span class="ident">CollectionDeposit</span> <span class="op">=</span> <span class="ident">CollectionDeposit</span>;
+	<span class="kw">type</span> <span class="ident">ItemDeposit</span> <span class="op">=</span> <span class="ident">ItemDeposit</span>;
 	<span class="kw">type</span> <span class="ident">MetadataDepositBase</span> <span class="op">=</span> <span class="ident">UniquesMetadataDepositBase</span>;
 	<span class="kw">type</span> <span class="ident">AttributeDepositBase</span> <span class="op">=</span> <span class="ident">AttributeDepositBase</span>;
 	<span class="kw">type</span> <span class="ident">DepositPerByte</span> <span class="op">=</span> <span class="ident">DepositPerByte</span>;
@@ -1362,6 +1434,7 @@
 	<span class="attribute">#[<span class="ident">cfg</span>(<span class="ident">feature</span> <span class="op">=</span> <span class="string">&quot;runtime-benchmarks&quot;</span>)]</span>
 	<span class="kw">type</span> <span class="ident">Helper</span> <span class="op">=</span> ();
 	<span class="kw">type</span> <span class="ident">CreateOrigin</span> <span class="op">=</span> <span class="ident">AsEnsureOriginWithArg</span><span class="op">&lt;</span><span class="ident">EnsureSigned</span><span class="op">&lt;</span><span class="ident">AccountId</span><span class="op">&gt;</span><span class="op">&gt;</span>;
+	<span class="kw">type</span> <span class="ident">Locker</span> <span class="op">=</span> ();
 }
 
 <span class="comment">// Create the runtime by composing the FRAME pallets that were previously configured.</span>
@@ -1663,5 +1736,5 @@
 	<span class="ident">CheckInherents</span> <span class="op">=</span> <span class="ident">CheckInherents</span>,
 }
 </code></pre></div>
-</section><section id="search" class="content hidden"></section></div></main><div id="rustdoc-vars" data-root-path="../../" data-current-crate="statemint_runtime" data-themes="ayu,dark,light" data-resource-suffix="" data-rustdoc-version="1.59.0 (9d1b2106e 2022-02-23)" ></div>
+</section><section id="search" class="content hidden"></section></div></main><div id="rustdoc-vars" data-root-path="../../" data-current-crate="statemint_runtime" data-themes="ayu,dark,light" data-resource-suffix="" data-rustdoc-version="1.60.0 (7737e0b5c 2022-04-04)" ></div>
 </body></html>

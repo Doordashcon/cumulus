@@ -1,6 +1,9 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `pallets&#x2F;parachain-system&#x2F;src&#x2F;lib.rs`."><meta name="keywords" content="rust, rustlang, rust-lang"><title>lib.rs - source</title><link rel="preload" as="font" type="font/woff2" crossorigin href="../../SourceSerif4-Regular.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../FiraSans-Regular.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../FiraSans-Medium.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../SourceCodePro-Regular.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../SourceSerif4-Bold.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../SourceCodePro-Semibold.ttf.woff2"><link rel="stylesheet" type="text/css" href="../../normalize.css"><link rel="stylesheet" type="text/css" href="../../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../../ayu.css" disabled><link rel="stylesheet" type="text/css" href="../../dark.css" disabled><link rel="stylesheet" type="text/css" href="../../light.css" id="themeStyle"><script id="default-settings" ></script><script src="../../storage.js"></script><script src="../../crates.js"></script><script defer src="../../main.js"></script><script defer src="../../source-script.js"></script><script defer src="../../source-files.js"></script>
-    <noscript><link rel="stylesheet" href="../../noscript.css"></noscript><link rel="alternate icon" type="image/png" href="../../favicon-16x16.png"><link rel="alternate icon" type="image/png" href="../../favicon-32x32.png"><link rel="icon" type="image/svg+xml" href="../../favicon.svg"></head><body class="rustdoc source"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"><div class="sidebar-menu" role="button">&#9776;</div><a class="sidebar-logo" href="../../cumulus_pallet_parachain_system/index.html"><div class="logo-container"><img class="rust-logo" src="../../rust-logo.png" alt="logo"></div>
-        </a></nav><main><div class="width-limiter"><div class="sub-container"><a class="sub-logo-container" href="../../cumulus_pallet_parachain_system/index.html"><img class="rust-logo" src="../../rust-logo.png" alt="logo"></a><nav class="sub"><div class="theme-picker"><button id="theme-picker" aria-label="Pick another theme!" aria-haspopup="menu" title="themes"><img width="18" height="18" alt="Pick another theme!" src="../../brush.svg"></button><div id="theme-choices" role="menu"></div></div><form class="search-form"><div class="search-container"><div><select id="crate-search"><option value="All crates">All crates</option></select><input class="search-input" name="search" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"></div><button type="button" id="help-button" title="help">?</button><a id="settings-menu" href="../../settings.html" title="settings"><img width="18" height="18" alt="Change settings" src="../../wheel.svg"></a></div></form></nav></div><section id="main-content" class="content"><div class="example-wrap"><pre class="line-numbers"><span id="1">   1</span>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `pallets/parachain-system/src/lib.rs`."><meta name="keywords" content="rust, rustlang, rust-lang"><title>lib.rs - source</title><link rel="preload" as="font" type="font/woff2" crossorigin href="../../SourceSerif4-Regular.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../FiraSans-Regular.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../FiraSans-Medium.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../SourceCodePro-Regular.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../SourceSerif4-Bold.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../SourceCodePro-Semibold.ttf.woff2"><link rel="stylesheet" type="text/css" href="../../normalize.css"><link rel="stylesheet" type="text/css" href="../../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../../ayu.css" disabled><link rel="stylesheet" type="text/css" href="../../dark.css" disabled><link rel="stylesheet" type="text/css" href="../../light.css" id="themeStyle"><script id="default-settings" ></script><script src="../../storage.js"></script><script src="../../crates.js"></script><script defer src="../../main.js"></script><script defer src="../../source-script.js"></script><script defer src="../../source-files.js"></script>
+    <noscript><link rel="stylesheet" href="../../noscript.css"></noscript><link rel="alternate icon" type="image/png" href="../../favicon-16x16.png"><link rel="alternate icon" type="image/png" href="../../favicon-32x32.png"><link rel="icon" type="image/svg+xml" href="../../favicon.svg"></head><body class="rustdoc source"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="mobile-topbar"><button class="sidebar-menu-toggle">&#9776;</button><a class="sidebar-logo" href="../../cumulus_pallet_parachain_system/index.html"><div class="logo-container"><img class="rust-logo" src="../../rust-logo.svg" alt="logo"></div>
+        </a><h2 class="location"></h2>
+    </nav>
+    <nav class="sidebar"><a class="sidebar-logo" href="../../cumulus_pallet_parachain_system/index.html"><div class="logo-container"><img class="rust-logo" src="../../rust-logo.svg" alt="logo"></div>
+        </a></nav><main><div class="width-limiter"><div class="sub-container"><a class="sub-logo-container" href="../../cumulus_pallet_parachain_system/index.html"><img class="rust-logo" src="../../rust-logo.svg" alt="logo"></a><nav class="sub"><div class="theme-picker hidden"><button id="theme-picker" aria-label="Pick another theme!" aria-haspopup="menu" title="themes"><img width="22" height="22" alt="Pick another theme!" src="../../brush.svg"></button><div id="theme-choices" role="menu"></div></div><form class="search-form"><div class="search-container"><span></span><input class="search-input" name="search" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><button type="button" id="help-button" title="help">?</button><a id="settings-menu" href="../../settings.html" title="settings"><img width="22" height="22" alt="Change settings" src="../../wheel.svg"></a></div></form></nav></div><section id="main-content" class="content"><div class="example-wrap"><pre class="line-numbers"><span id="1">   1</span>
 <span id="2">   2</span>
 <span id="3">   3</span>
 <span id="4">   4</span>
@@ -1050,6 +1053,22 @@
 <span id="1048">1048</span>
 <span id="1049">1049</span>
 <span id="1050">1050</span>
+<span id="1051">1051</span>
+<span id="1052">1052</span>
+<span id="1053">1053</span>
+<span id="1054">1054</span>
+<span id="1055">1055</span>
+<span id="1056">1056</span>
+<span id="1057">1057</span>
+<span id="1058">1058</span>
+<span id="1059">1059</span>
+<span id="1060">1060</span>
+<span id="1061">1061</span>
+<span id="1062">1062</span>
+<span id="1063">1063</span>
+<span id="1064">1064</span>
+<span id="1065">1065</span>
+<span id="1066">1066</span>
 </pre><pre class="rust"><code><span class="comment">// Copyright 2020 Parity Technologies (UK) Ltd.</span>
 <span class="comment">// This file is part of Cumulus.</span>
 
@@ -1382,7 +1401,9 @@
 
 					<span class="ident"><span class="self">Self</span>::put_parachain_code</span>(<span class="kw-2">&amp;</span><span class="ident">validation_code</span>);
 					<span class="op">&lt;</span><span class="ident">T::OnSystemEvent</span> <span class="kw">as</span> <span class="ident">OnSystemEvent</span><span class="op">&gt;</span><span class="ident">::on_validation_code_applied</span>();
-					<span class="ident"><span class="self">Self</span>::deposit_event</span>(<span class="ident">Event::ValidationFunctionApplied</span>(<span class="ident">vfp</span>.<span class="ident">relay_parent_number</span>));
+					<span class="ident"><span class="self">Self</span>::deposit_event</span>(<span class="ident">Event::ValidationFunctionApplied</span> {
+						<span class="ident">relay_chain_block_num</span>: <span class="ident">vfp</span>.<span class="ident">relay_parent_number</span>,
+					});
 				},
 				<span class="prelude-val">Some</span>(<span class="ident">relay_chain::v2::UpgradeGoAhead::Abort</span>) =&gt; {
 					<span class="op">&lt;</span><span class="ident">PendingValidationCode</span><span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span><span class="op">&gt;</span><span class="ident">::kill</span>();
@@ -1441,7 +1462,7 @@
 
 			<span class="ident">AuthorizedUpgrade</span>::<span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span><span class="ident">::put</span>(<span class="kw-2">&amp;</span><span class="ident">code_hash</span>);
 
-			<span class="ident"><span class="self">Self</span>::deposit_event</span>(<span class="ident">Event::UpgradeAuthorized</span>(<span class="ident">code_hash</span>));
+			<span class="ident"><span class="self">Self</span>::deposit_event</span>(<span class="ident">Event::UpgradeAuthorized</span> { <span class="ident">code_hash</span> });
 			<span class="prelude-val">Ok</span>(())
 		}
 
@@ -1463,17 +1484,15 @@
 		<span class="doccomment">/// The validation function has been scheduled to apply.</span>
 		<span class="ident">ValidationFunctionStored</span>,
 		<span class="doccomment">/// The validation function was applied as of the contained relay chain block number.</span>
-		<span class="ident">ValidationFunctionApplied</span>(<span class="ident">RelayChainBlockNumber</span>),
+		<span class="ident">ValidationFunctionApplied</span> { <span class="ident">relay_chain_block_num</span>: <span class="ident">RelayChainBlockNumber</span> },
 		<span class="doccomment">/// The relay-chain aborted the upgrade process.</span>
 		<span class="ident">ValidationFunctionDiscarded</span>,
 		<span class="doccomment">/// An upgrade has been authorized.</span>
-		<span class="ident">UpgradeAuthorized</span>(<span class="ident">T::Hash</span>),
+		<span class="ident">UpgradeAuthorized</span> { <span class="ident">code_hash</span>: <span class="ident">T::Hash</span> },
 		<span class="doccomment">/// Some downward messages have been received and will be processed.</span>
-		<span class="doccomment">/// \[ count \]</span>
-		<span class="ident">DownwardMessagesReceived</span>(<span class="ident">u32</span>),
+		<span class="ident">DownwardMessagesReceived</span> { <span class="ident">count</span>: <span class="ident">u32</span> },
 		<span class="doccomment">/// Downward messages were processed using the given weight.</span>
-		<span class="doccomment">/// \[ weight_used, result_mqc_head \]</span>
-		<span class="ident">DownwardMessagesProcessed</span>(<span class="ident">Weight</span>, <span class="ident">relay_chain::Hash</span>),
+		<span class="ident">DownwardMessagesProcessed</span> { <span class="ident">weight_used</span>: <span class="ident">Weight</span>, <span class="ident">dmq_head</span>: <span class="ident">relay_chain::Hash</span> },
 	}
 
 	<span class="attribute">#[<span class="ident">pallet::error</span>]</span>
@@ -1802,7 +1821,7 @@
 
 		<span class="kw">let</span> <span class="kw-2">mut</span> <span class="ident">weight_used</span> <span class="op">=</span> <span class="number">0</span>;
 		<span class="kw">if</span> <span class="ident">dm_count</span> <span class="op">!</span><span class="op">=</span> <span class="number">0</span> {
-			<span class="ident"><span class="self">Self</span>::deposit_event</span>(<span class="ident">Event::DownwardMessagesReceived</span>(<span class="ident">dm_count</span>));
+			<span class="ident"><span class="self">Self</span>::deposit_event</span>(<span class="ident">Event::DownwardMessagesReceived</span> { <span class="ident">count</span>: <span class="ident">dm_count</span> });
 			<span class="kw">let</span> <span class="ident">max_weight</span> <span class="op">=</span>
 				<span class="op">&lt;</span><span class="ident">ReservedDmpWeightOverride</span><span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span><span class="op">&gt;</span><span class="ident">::get</span>().<span class="ident">unwrap_or_else</span>(<span class="ident">T::ReservedDmpWeight::get</span>);
 
@@ -1815,7 +1834,10 @@
 			<span class="ident">weight_used</span> <span class="op">+</span><span class="op">=</span> <span class="ident">T::DmpMessageHandler::handle_dmp_messages</span>(<span class="ident">message_iter</span>, <span class="ident">max_weight</span>);
 			<span class="op">&lt;</span><span class="ident">LastDmqMqcHead</span><span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span><span class="op">&gt;</span><span class="ident">::put</span>(<span class="kw-2">&amp;</span><span class="ident">dmq_head</span>);
 
-			<span class="ident"><span class="self">Self</span>::deposit_event</span>(<span class="ident">Event::DownwardMessagesProcessed</span>(<span class="ident">weight_used</span>, <span class="ident">dmq_head</span>.<span class="ident">head</span>()));
+			<span class="ident"><span class="self">Self</span>::deposit_event</span>(<span class="ident">Event::DownwardMessagesProcessed</span> {
+				<span class="ident">weight_used</span>,
+				<span class="ident">dmq_head</span>: <span class="ident">dmq_head</span>.<span class="ident">head</span>(),
+			});
 		}
 
 		<span class="comment">// After hashing each message in the message queue chain submitted by the collator, we</span>
@@ -2099,7 +2121,20 @@
 			.<span class="ident">map</span>(<span class="op">|</span><span class="ident">d</span><span class="op">|</span> <span class="ident">d</span>.<span class="ident">relay_parent_number</span>)
 			.<span class="ident">unwrap_or_default</span>()
 	}
+	<span class="attribute">#[<span class="ident">cfg</span>(<span class="ident">feature</span> <span class="op">=</span> <span class="string">&quot;runtime-benchmarks&quot;</span>)]</span>
+	<span class="kw">fn</span> <span class="ident">set_block_number</span>(<span class="ident">block</span>: <span class="ident"><span class="self">Self</span>::BlockNumber</span>) {
+		<span class="kw">let</span> <span class="kw-2">mut</span> <span class="ident">validation_data</span> <span class="op">=</span> <span class="ident">Pallet</span>::<span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span><span class="ident">::validation_data</span>().<span class="ident">unwrap_or_else</span>(<span class="op">|</span><span class="op">|</span>
+			<span class="comment">// PersistedValidationData does not impl default in non-std</span>
+			<span class="ident">PersistedValidationData</span> {
+				<span class="ident">parent_head</span>: <span class="macro">vec!</span>[].<span class="ident">into</span>(),
+				<span class="ident">relay_parent_number</span>: <span class="ident">Default::default</span>(),
+				<span class="ident">max_pov_size</span>: <span class="ident">Default::default</span>(),
+				<span class="ident">relay_parent_storage_root</span>: <span class="ident">Default::default</span>(),
+			});
+		<span class="ident">validation_data</span>.<span class="ident">relay_parent_number</span> <span class="op">=</span> <span class="ident">block</span>;
+		<span class="ident">ValidationData</span>::<span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span><span class="ident">::put</span>(<span class="ident">validation_data</span>)
+	}
 }
 </code></pre></div>
-</section><section id="search" class="content hidden"></section></div></main><div id="rustdoc-vars" data-root-path="../../" data-current-crate="cumulus_pallet_parachain_system" data-themes="ayu,dark,light" data-resource-suffix="" data-rustdoc-version="1.59.0 (9d1b2106e 2022-02-23)" ></div>
+</section><section id="search" class="content hidden"></section></div></main><div id="rustdoc-vars" data-root-path="../../" data-current-crate="cumulus_pallet_parachain_system" data-themes="ayu,dark,light" data-resource-suffix="" data-rustdoc-version="1.60.0 (7737e0b5c 2022-04-04)" ></div>
 </body></html>
